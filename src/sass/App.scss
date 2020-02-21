@@ -1,2 +1,9 @@
 @import 'variables';
 @import 'listings';
+@import 'content-area';
+
+*,
+body,
+html {
+  box-sizing: border-box;
+}

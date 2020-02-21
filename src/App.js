@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Components/Layout/Header';
+import Filter from './Components/Filter';
+import Listings from './Components/Listings';
 import './sass/App.scss';
 
 class App extends Component {
@@ -13,6 +15,10 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <section id='content-area'>
+          <Filter />
+          <Listings />
+        </section>
       </div>
     );
   }
