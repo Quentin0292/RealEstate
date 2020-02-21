@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.scss';
+import Header from './Components/Layout/Header';
+import './sass/App.scss';
 
 class App extends Component {
   constructor() {
@@ -11,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Real Estate</h1>
+        <Header />
       </div>
     );
   }
