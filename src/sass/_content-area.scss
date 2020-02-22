@@ -1,3 +1,9 @@
+#content-area {
+  overflow: auto;
+  width: 100%;
+  min-height: 100vh;
+}
+
 #filter {
   background: $grey;
   width: 30%;
@@ -68,11 +74,11 @@
     input[type='text'] {
       width: 70%;
       background: transparent;
-      font-weight: 300;
       color: $lightgrey;
       font-size: 2rem;
       border: none;
-      border-bottom: 2px solid $lightgrey;
+      border-bottom: 1px solid $darkgrey;
+      font-weight: 100;
       margin-bottom: 20px;
     }
   }
@@ -80,7 +86,7 @@
   .sortby-area {
     margin-bottom: 20px;
     .results {
-      color: $lightgrey;
+      color: $darkgrey;
       font-size: 0.8rem;
       letter-spacing: 0.1em;
       display: inline-block;
@@ -106,4 +112,190 @@
       }
     }
   }
+
+  .listings-results {
+    // margin-right: 30px;
+    // border: 1px solid red;
+    // display: grid;
+    // grid-template-columns: 33.33% 33.33% 33.33%;
+    // grid-gap: 3%;
+    // justify-items: start;
+    // flex-wrap: wrap;
+    // margin: 0 auto;
+    margin-bottom: 60px;
+    .listing {
+      // border: 1px solid red;
+      background: #fff;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+      -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+      box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+    }
+    .listing-img {
+      color: white;
+      padding: 15px;
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2860&q=80')
+        no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      min-height: 200px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      &:hover {
+        .details {
+          opacity: 1;
+        }
+        .address {
+          opacity: 0;
+        }
+      }
+
+      .address {
+        position: absolute;
+        bottom: 20px;
+        transition: all 0.6s ease-in-out;
+        opacity: 1;
+      }
+
+      .details {
+        transition: all 0.6s ease-in-out;
+        opacity: 0;
+        padding: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5117ef+0,da82f2+100 */
+        background: rgba(78, 2, 229, 0.8); /* Old browsers */
+        background: -moz-linear-gradient(
+          -45deg,
+          rgba(78, 2, 229, 0.8) 0%,
+          rgba(157, 28, 237, 0.8) 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          -45deg,
+          rgba(78, 2, 229, 0.8) 0%,
+          rgba(157, 28, 237, 0.8) 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+          135deg,
+          rgba(78, 2, 229, 0.8) 0%,
+          rgba(157, 28, 237, 0.8) 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5117ef', endColorstr='#da82f2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+        .user-img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: 2px solid white;
+          display: inline-block;
+          background: url('https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2860&q=80')
+            no-repeat center center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+        .user-details {
+          display: inline-block;
+          vertical-align: top;
+
+          .user-name {
+            font-weight: 300;
+            font-size: 0.9rem;
+            display: block;
+            color: rgba(255, 255, 255, 1);
+            margin-top: 3px;
+            margin-bottom: 5px;
+          }
+          .post-date {
+            font-size: 0.9rem;
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+          }
+        }
+        .listing-details {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          i {
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 15px;
+          }
+          span {
+            font-size: 0.8rem;
+            font-weight: 300;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            top: 3px;
+          }
+          .floor-space {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .bottom-info {
+      padding: 15px;
+      .price {
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 10px;
+        color: $darkgrey;
+      }
+      .location {
+        font-size: 1.2rem;
+        display: block;
+        color: $lightgrey;
+      }
+    }
+  }
+}
+
+.view-btn {
+  background: $pink;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 150px;
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+}
+
+.col-md-3 {
+  width: 33.33%;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.col-md-9 {
+  width: 75%;
+  display: inline-block;
+}
+
+.detail-col-md-3 {
+  width: 25%;
+  vertical-align: top;
+  display: inline-block;
 }
