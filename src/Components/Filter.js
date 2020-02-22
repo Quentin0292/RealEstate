@@ -35,15 +35,15 @@ class Filter extends Component {
           </div>
           <div className='filters extras'>
             <span className='title'>Extras</span>
-            <label for='extras' className='title'>
+            <label htmlFor='extras' className='title'>
               <span>Elevators</span>
               <input type='checkbox' value='elevators' name='extras' />
             </label>
-            <label for='extras' className='title'>
+            <label htmlFor='extras' className='title'>
               <span>Swimming Pool</span>
               <input type='checkbox' value='swimming-pool' name='extras' />
             </label>
-            <label for='extras' className='title'>
+            <label htmlFor='extras' className='title'>
               <span>Gym</span>
               <input type='checkbox' value='gym' name='extras' />
             </label>
